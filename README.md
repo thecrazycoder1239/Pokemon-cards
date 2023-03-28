@@ -1,3 +1,3 @@
 ## Pokemon API
 
-Hello There!
+Hello There! This is my data visualisation project using the Pokemon API
