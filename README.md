@@ -6,7 +6,7 @@ Hello there, weary traveller!
   
   This application is a data visualisation project. In this react project I fetch data from the Pokemon API to create custom trading cards. Some features include: the type of pokemon changing the background of the card and my spinning pokemon ball made with css.
   
-  I am currently attempting to build a pokemon battler where you can battle your chosen pokemon using this application. I will update this read-me when this is added.
+  I am currently attempting to build a pokemon battler where you can battle your chosen pokemon using this application. I will update this read-me when this is added. **The fight button does not work yet** (you have been warned!).
   
   So what are you waiting for?? Check out the link below to the **hosted application**...
 
