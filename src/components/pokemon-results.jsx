@@ -62,7 +62,7 @@ export default function PokemonResults({pokemonURL}) {
         {isDefault ? <p>e.g. Pikachu, Bulbasur, Charmander, etc...</p> : <></>}
         {isLoading ? <p>searching the official database for your desired pokemon...</p> : 
         <ul id={pokemonType} className={isDefault ? 'hidden-stats' : 'visible-stats'}>
-        <img src={pokemonImg} alt='picture of chosen pokemon'></img>
+        <img src={pokemonImg} alt='chosen pokemon'></img>
         <li key='name'>Name: {PokemonName}</li>
         <li key='experience'>Health: {pokemonExp}</li>
         <li key="type">Type: {pokemonType}</li>
