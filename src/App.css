@@ -1,38 +1,274 @@
 .App {
-  text-align: center;
+    text-align: center;
+    background-color: #488aad;
+    height: 120vh;
+    font-family: 'Play', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pokeball-bottom {
+    z-index: 1;
+    position: absolute;
+    margin-left:-50px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 100px;
+    border-radius: 150px 150px 0 0;
+    background-color: rgb(182, 0, 0);
+    
+    transform-origin: bottom;
+    animation: rotation 5s infinite linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.pokeball-top {
+    z-index: 1;
+    position: absolute;
+    margin-left: -50px;
+    top: calc(55% + 50px);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 50px;
+    width: 100px;
+    border-radius: 0px 0px 150px 150px;
+    background-color: rgb(230, 230, 230);
+    transform-origin: top;
+    animation: rotation 5s infinite linear;
+}
+
+.pokeball-middle {
+    z-index: 1;
+    position: absolute;
+    top: calc(55% + 25px);
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 25px;
+    width: 25px;
+    border-radius: 150px 150px 150px 150px;
+    background-color: rgb(0, 0, 0);
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.pokeball { 
+    /* position: absolute;
+    pointer-events: none;
+    top: 64%;
+    left: 50%; */
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .pokeball {
+      animation: App-logo-spin infinite 5s linear;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+.Header {
+    color: #dcae10;
+    padding: 2rem;
+    font-size: 2.5rem;
+    border-bottom: 0.3rem solid black;
+    background-color: #de454d;
+    margin: 0px;
+    font-family: 'Tilt Warp', cursive;
+    width: 100vw;
+    position: fixed;
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
+.hidden-stats {
+    visibility: hidden;
+}
+
+.visible-stats {
+    visibility: visible;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.search {
+    padding-top: 12rem;
+}
+
+ul {
+    margin: 0px;
+}
+
+img {
+    border: 0.3rem double black;
+    border-radius: 0.4rem;
+    margin: 0.2rem;
+    height: 6rem;
+    width: 8rem;
+}
+
+.button {
+    border-radius: 0.5rem;
+    background-color: #dcae10;
+    font-family: 'Tilt Warp', cursive;
+    width: 5rem;
+    height: 2rem;
+    margin: 2rem;
+}
+
+input {
+    border-radius: 0.25rem;
+    background-color: rgb(255, 238, 186);
+}
+
+#fight-button {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -2.5rem;
+}
+
+#normal {
+    background: linear-gradient(0.2turn, rgb(166, 149, 65), rgb(231, 189, 131));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#fire {
+    background: linear-gradient(0.2turn,rgb(163, 0, 0), rgb(187, 62, 0));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#grass {
+    background: linear-gradient(0.2turn,rgb(33, 118, 43), rgb(1, 85, 40));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#water {
+    background: linear-gradient(0.2turn,rgb(47, 70, 173), rgb(0, 137, 156));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#electric {
+    background: linear-gradient(0.2turn, rgb(107, 49, 146), rgba(69, 23, 99, 0.461));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#poison {
+    background: linear-gradient(0.2turn, rgb(75, 161, 81), rgb(44, 96, 47));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#fighting {
+    background: linear-gradient(0.2turn, rgb(146, 38, 105), rgb(107, 2, 67));
+    width: 12rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border: 0.5rem solid black;
+    border-radius: 7%;
+}
+
+#copyright{
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5rem;
+    width: 15rem;
+}
+
+
+@media only screen and (min-width: 900px) {
+    .Header {
+        font-size: 4rem;
+    }
+
+    .App {
+        font-size: 1.5rem;
+    }
+
+    #normal,
+    #fighting,
+    #grass,
+    #water,
+    #fire,
+    #normal,
+    #electric {
+        width: 15rem;
+    }
+
+    .button {
+        width: 6rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    #fight-button {
+        margin-left: -3rem;
+    }
+
+    input {
+        height: 2rem;
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+
+    #copyright{
+        margin-left: -15rem;
+        width: 30rem;
+    }
+  }
